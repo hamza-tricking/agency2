@@ -20,6 +20,7 @@
   width: 100vw;
 }
 .navbarup {
+  z-index: 99999;
   position: relative;
   display: flex;
   justify-content: space-between;
