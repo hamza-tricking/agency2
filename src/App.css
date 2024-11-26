@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+:root {
+  --primary-font: "Arial", sans-serif;
+  --secondary-font: "Roboto", sans-serif;
+  --primary-color: #0388a6;
+  --secondary-color: #99e9f2;
+  --third-color: #03588c;
+  --foorth-color: #031626;
+  --fifth-color: #022340;
+  --background-color: #f4f4f4;
+  --text-color: #031626;
+  --primary-font: "";
+  --secondary-font: "Roboto", sans-serif;
+}
+@font-face {
+  font-family: "DolceAmyara";
+  src: url("../public/fonts/DolceAmyara.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "DolceAmyara", sans-serif;
+
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* navBarTOp/  */
+.navtop-wrapper {
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth fade and slide */
+  height: auto; /* Maintain height while transitioning */
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navtop-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0); /* Fully visible */
 }
 
-.App-link {
-  color: #61dafb;
+.navtop-wrapper.hidden {
+  opacity: 0;
+  transform: translateY(-100%); /* Slide up and hide */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* navBarTOp/  */

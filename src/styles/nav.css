@@ -1,0 +1,217 @@
+.navbar-logo img {
+  position: absolute;
+  top: -18px;
+  left: 36px;
+  width: 120px; /* Adjust as needed */
+  height: 120px; /* Adjust as needed */
+}
+
+/* General styling for the navbar */
+.navbar {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 20px;
+  font-family: var(--primary-font);
+  width: 100vw;
+}
+.navbarup {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 20px;
+  font-family: var(--primary-font);
+  width: 100vw;
+}
+
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-right: 40px;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.navbar-links a:hover {
+  color: var(--primary-color);
+}
+
+.contact-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background-color: var(--third-color);
+  transition: background-color 0.3s ease;
+}
+
+/* Menu toggle button (visible only on smaller screens) */
+.menu-toggle {
+  display: none;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-right: 69px;
+}
+
+.menu-toggle:hover {
+  background-color: var(--third-color);
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Sidebar styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -325px;
+  width: 325px;
+  height: 100%;
+  background-color: var(--background-color);
+  transition: left 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.sidebar.visible {
+  left: 0;
+}
+
+.sidebar-header {
+  height: 5rem;
+  background-color: var(--foorth-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-header img {
+  margin-top: 20px;
+  width: 280px;
+  height: auto;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: var(--third-color);
+}
+
+.sidebar-links {
+  list-style-type: none;
+  padding-left: 10px;
+  justify-items: center;
+}
+
+.sidebar-links li {
+  margin: 5px 0;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 13px; /* Smaller font size */
+  font-weight: 700;
+}
+
+.sidebar-links a:hover {
+  color: var(--primary-color); /* Hover effect */
+}
+
+.sidebar-links .contact-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  background-color: var(--background-color);
+  padding: 10px 0;
+  margin: 0;
+  width: 200px; /* Adjust as needed */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 14px; /* Adjust for smaller font */
+  font-weight: 500;
+}
+
+.dropdown-menu a:hover {
+  color: var(--primary-color); /* Matches hover color of navbar links */
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
+}

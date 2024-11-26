@@ -1,0 +1,271 @@
+/* Style for the first section */
+.home-part {
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* background: url("/images/background.jpeg") no-repeat center center / cover; */
+  background-size: cover;
+  padding: 0 20px;
+}
+.home-part2 {
+  margin-top: 80px;
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* background: url("/images/background.png") no-repeat center center; */
+  background-size: cover;
+  padding: 0 20px;
+}
+.left-side {
+  width: 50%;
+  position: relative;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.right-side {
+  margin-top: 50px;
+  width: 50%;
+  text-align: right;
+}
+
+.scaling-image {
+  width: 100%;
+  max-width: 400px; /* Adjust as needed */
+  animation: scaleAnimation 5s infinite alternate;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.text-section {
+  position: relative;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: var(--fifth-color);
+  max-width: 500px;
+  margin-bottom: 20px;
+  top: 40%;
+  line-height: 2.2;
+}
+
+.text-section h1 {
+  text-align: center;
+  font-size: 34px;
+}
+.text-section p {
+  text-align: center;
+  font-size: 15px;
+}
+
+.request-button {
+  background-color: var(--primary-color); /* Set your primary color */
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-right: 15rem;
+}
+
+.request-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile & Tablet View - Stack the content and reduce font size */
+@media (max-width: 768px) {
+  /* Update background for smaller screens */
+  section {
+    background-image: url("../assets/background.jpeg"); /* Ensure path is correct */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Stack the layout */
+  .home-part,
+  .home-part2 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Update the left-side and right-side to take full width */
+  .left-side,
+  .right-side {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* Adjust the image to be behind text */
+  .left-side {
+    position: relative;
+    z-index: 1;
+  }
+
+  .scaling-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place image behind text */
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+  }
+
+  /* Move text to the top and make it centered */
+  .text-section {
+    z-index: 9999;
+    font-size: 14px; /* Smaller font size for mobile */
+    max-width: 100%;
+    top: 10%; /* Move the text to the top */
+    text-align: center;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255),
+      0 0 25px rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+  }
+
+  .text-section h1 {
+    font-size: 28px; /* Smaller font size for heading */
+  }
+
+  .request-button {
+    font-size: 16px; /* Adjust button font size */
+    padding: 12px 20px;
+    margin: 40px 40%; /* Center the button and give space from text */
+  }
+
+  /* Optional: Reduce margins for mobile */
+  .right-side {
+    margin-top: 0;
+  }
+}
+/* / second part / */
+.glass-container {
+  margin-top: 40vh;
+  display: flex;
+  justify-content: center;
+  background: rgba(173, 216, 230, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 100vw;
+}
+
+/* Title styling */
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* contanier slide / */
+
+.slideIconse {
+  width: 100vw;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  height: 70vh;
+  background-color: var(--foorth-color);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.slideIconse img {
+  border-radius: 10px;
+  background-color: rgba(0, 255, 255, 0.468);
+  width: 100%;
+  height: 70%;
+  backdrop-filter: blur(50);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.slideIconse button {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 20px;
+  height: 2rem;
+  width: 2rem;
+  margin: 10px;
+  position: relative;
+  top: 35%;
+  transition: background-color 0.3s ease-in-out;
+}
+.slideIconse button:hover {
+  cursor: pointer;
+
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 20px;
+  height: 2rem;
+  width: 2rem;
+  margin: 10px;
+  position: relative;
+  top: 35%;
+}
+.item {
+  justify-items: center;
+  color: var(--fifth-color);
+  margin: 10px 10px;
+}
+.item p {
+  align-content: center;
+  text-align: center;
+  margin-top: -29px;
+  color: rgb(255, 255, 255);
+  z-index: 999999;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 370px;
+  overflow: hidden;
+}
+.item {
+  position: absolute;
+  width: 200px;
+  height: 320px;
+  text-align: justify;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.5s;
+  left: calc(50% - 110px);
+  top: 0;
+}
+#next,
+#prev {
+  position: absolute;
+  top: 40%;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  font-size: xxx-large;
+  font-family: monospace;
+  font-weight: bold;
+  left: 400px;
+}
+#next {
+  left: unset;
+  right: 400px;
+}
+.title-Slide {
+  font-size: smaller;
+}

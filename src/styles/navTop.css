@@ -1,0 +1,116 @@
+.navtop {
+  background-color: var(--primary-color); /* Adjust color */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+  font-family: var(--primary-font);
+}
+
+.navtop-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Center the content and limit width */
+}
+
+.navtop-icons {
+  display: flex;
+  gap: 65px; /* Space between icons */
+}
+
+.navtop-icons a {
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.navtop-icons a:hover {
+  color: var(--secondary-color); /* Change color on hover */
+}
+
+.navtop-slogan {
+  font-size: 22px;
+  font-style: italic;
+  padding-top: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.navtop-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.language-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.language-button:hover {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--secondary-color);
+}
+
+.language-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+  position: absolute;
+  background-color: var(--primary-color);
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  right: 10%;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Ensure it's not interactable */
+  transform: translateY(-10px); /* Initially offset above */
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s; /* Transition for smoothness */
+}
+
+/* When the options are visible, change opacity, visibility, and position */
+.language-options.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* Slide down */
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0s; /* Transition for visibility */
+}
+
+.language-options span {
+  cursor: pointer;
+  font-size: 20px;
+}
+.language-options span:hover {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.language-options span:hover {
+  opacity: 0.7;
+}
+
+.down-arrow {
+  margin-left: 5px;
+}
+
+.contact-number {
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+.contact-number:hover {
+  font-size: 14px;
+  margin-left: 20px;
+  color: var(--secondary-color);
+}
