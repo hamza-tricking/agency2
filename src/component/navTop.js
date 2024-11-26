@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/navTop.css";
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
+
 import "flag-icons/css/flag-icons.min.css";
 
 const Navtop = () => {

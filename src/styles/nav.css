@@ -109,6 +109,7 @@
 
 .sidebar.visible {
   left: 0;
+  z-index: 99999;
 }
 
 .sidebar-header {
